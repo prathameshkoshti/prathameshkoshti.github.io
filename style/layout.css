@@ -31,5 +31,12 @@ nav .container {
   margin-left: 30px;
 }
 
+.background-logo {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  opacity: 0.5;
+}
+
 @media only screen and (max-width: 720px) {
 }

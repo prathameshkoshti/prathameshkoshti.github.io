@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400px" height="400px" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>Logo</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logo">
+            <g>
+                <path d="M30.7692308,1.42108547e-14 L215.384615,1.42108547e-14 L215.384615,92.3076923 C215.384615,143.287823 174.057054,184.615385 123.076923,184.615385 C72.0967923,184.615385 30.7692308,143.287823 30.7692308,92.3076923 L30.7692308,1.42108547e-14 L30.7692308,1.42108547e-14 Z" id="Rectangle" fill="#D8D8D8" fill-rule="evenodd"></path>
+                <polygon id="Path-2" fill="#D8D8D8" fill-rule="evenodd" transform="translate(307.692308, 307.692308) scale(-1, 1) translate(-307.692308, -307.692308) " points="400 215.384615 400 400 215.384615 400"></polygon>
+                <line x1="0" y1="400" x2="384.615385" y2="0" id="Path-3" stroke="#D8D8D8" stroke-width="1" stroke-linecap="round"></line>
+            </g>
+        </g>
+    </g>
+</svg>
