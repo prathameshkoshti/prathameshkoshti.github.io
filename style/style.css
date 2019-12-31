@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
+:root {
+  --white: #efefef;
+  --black: #1d1d23;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #1d1d23;
+  font-family: "Source Sans Pro", sans-serif;
+  color: var(--white);
+}
+svg {
+  position: absolute;
+}
+#lettermark {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  opacity: 0.6;
+}
+#mainpage {
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle, #2d2d2d, #1d1d23);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.quick-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  filter: url("#gooey");
+  bottom: 50px;
+  right: 50px;
+}
+#checkbox {
+  display: none;
+}
+label {
+  width: 60px;
+  height: 60px;
+  background: var(--white);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+}
+.quick-links > * {
+  position: absolute;
+  transition: 0.75s ease-in-out;
+}
+i {
+  color: var(--black);
+}
+.quick-links > a > i {
+  color: var(--black);
+  background: var(--white);
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  transition: 0.3s ease;
+  /* 	pointer-events: none; */
+}
+.quick-links > a > i:hover {
+  cursor: pointer;
+  color: var(--white);
+}
+#checkbox:checked ~ a > i {
+  pointer-events: auto;
+}
+#checkbox:checked ~ .instagram {
+  transform: translatey(-70px);
+}
+#checkbox:checked ~ .dribbble {
+  transform: translatey(-130px);
+}
+#checkbox:checked ~ .codepen {
+  transform: translatey(-190px);
+}
+#checkbox:checked ~ .github {
+  transform: translatey(-250px);
+}
+#checkbox:checked ~ .twitter {
+  transform: translatey(-310px);
+}
+#checkbox:checked ~ .medium {
+  transform: translatey(-370px);
+}
+#checkbox:checked ~ .dev {
+  transform: translatey(-430px);
+}
+#checkbox:checked ~ .linkedin {
+  transform: translatey(-490px);
+}
+.quick-links a {
+  text-decoration: none;
+}
+.quick-links a > i:after {
+  font-family: "Source Sans Pro", sans-serif;
+  content: attr(data-tooltip);
+  position: absolute;
+  left: -90px;
+  font-size: 1rem;
+  color: var(--black);
+  background: var(--white);
+  padding: 7px 10px;
+  filter: url("#text");
+  opacity: 0;
+  border-radius: 5px;
+}
+.quick-links a > i:hover:after {
+  opacity: 1;
+}
+.instagram > i:hover {
+  background: -moz-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+.dribbble > i:hover {
+  background: #ea4c89;
+}
+.medium > i:hover {
+  background: #00ab6c;
+}
+.twitter > i:hover {
+  background: #1da1f2;
+}
+.github > i:hover {
+  background: #333;
+}
+.dev > i:hover {
+  background: #0a0a0a;
+}
+.linkedin > i:hover {
+  background: #0077b5;
+}
+.codepen > i:hover {
+  background: #1e1f26;
+}
+.profile_image {
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 10px 20px #1d1d23;
+  background-position-x: 50%;
+  background-image: url(https://drive.google.com/uc?export=view&id=14F12aOe7wg0PQJmLSm2a3koW0m7RlDh6);
+  background-size: cover;
+  background-clip: padding-box;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 5px solid var(--white);
+}
+
+.logo {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.p {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background: var(--white);
+  top: 1px;
+  left: 0;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 6%, 0% 90%);
+  z-index: 2;
+  animation: translateP 2s 6s ease forwards;
+}
+
+.p:after {
+  content: "";
+  width: 90px;
+  height: 90px;
+  border-radius: 0 0 100% 100%;
+  background: #1d1d23;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-100%, -100%);
+  animation: rotateP 3s 2s ease forwards;
+  transform-origin: -50% -50%;
+  transform: rotate(90deg) translate(-100%, -100%);
+}
+
+.k {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background: var(--white);
+  top: 0px;
+  left: 0;
+  clip-path: polygon(100% 100%, 100% 6%, 0% 90%, 0% 100%);
+  animation: translateK 2s 6s ease forwards;
+}
+.k:after {
+  content: "";
+  width: 90px;
+  height: 90px;
+  background: #1d1d23;
+  position: absolute;
+  bottom: 48.6%;
+  right: 50%;
+  transform: translate(100%, 100%);
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+  animation: rotateK 3s 2s ease forwards;
+  transform-origin: 150% 150%;
+  transform: rotate(180deg) translate(100%, 100%);
+}
+
+.typing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 70px;
+}
+h1 {
+  margin: 0;
+}
+#cursor {
+  width: 0;
+  border-left: 2px solid var(--white);
+  height: 55px;
+  animation: cursor-blink 1s infinite;
+}
+
+.typing {
+  animation: none !important;
+}
+
+.fadeout {
+  animation: fadeout 0.3s ease forwards;
+}
+.fadein {
+  animation: fadein 0.3s ease forwards;
+}
+
+@keyframes cursor-blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-basis: 600px;
+    transform: scale(0.5);
+  }
+}
+
+@keyframes rotateP {
+  0%,
+  75% {
+    transform: rotate(90deg) translate(-100%, -100%);
+  }
+  25% {
+    transform: rotate(270deg) translate(-100%, -100%);
+  }
+  50% {
+    transform: rotate(180deg) translate(-100%, -100%);
+  }
+  100% {
+    transform: rotate(0deg) translate(-100%, -100%);
+  }
+}
+
+@keyframes rotateK {
+  0%,
+  75% {
+    transform: rotate(180deg) translate(100%, 100%);
+  }
+  25% {
+    transform: rotate(270deg) translate(100%, 100%);
+  }
+  50% {
+    transform: rotate(90deg) translate(100%, 100%);
+  }
+  100% {
+    transform: rotate(0deg) translate(100%, 100%);
+  }
+}
+
+@keyframes translateK {
+  to {
+    transform: translate(100%, 100%);
+    opacity: 0;
+  }
+}
+@keyframes translateP {
+  to {
+    transform: translate(-100%, -100%);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadein {
+  to {
+    opacity: 1;
+  }
+}
