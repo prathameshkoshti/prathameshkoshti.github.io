@@ -15,6 +15,7 @@ body {
 }
 svg {
   position: absolute;
+  pointer-events: none;
 }
 #lettermark {
   position: absolute;
