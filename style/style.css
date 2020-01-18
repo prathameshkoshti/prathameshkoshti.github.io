@@ -9,9 +9,9 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background: #1d1d23;
+  background: var(--white);
   font-family: "Source Sans Pro", sans-serif;
-  color: var(--white);
+  color: var(--black);
 }
 svg {
   position: absolute;
@@ -21,12 +21,11 @@ svg {
   position: absolute;
   left: 20px;
   bottom: 20px;
-  opacity: 0.6;
 }
 #mainpage {
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(circle, #2d2d2d, #1d1d23);
+  background: radial-gradient(circle, #fff, var(--white));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,7 +47,7 @@ svg {
 label {
   width: 60px;
   height: 60px;
-  background: var(--white);
+  background: var(--black);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -60,11 +59,11 @@ label {
   transition: 0.75s ease-in-out;
 }
 i {
-  color: var(--black);
+  color: var(--white);
 }
 .quick-links > a > i {
-  color: var(--black);
-  background: var(--white);
+  color: var(--white);
+  background: var(--black);
   width: 45px;
   height: 45px;
   display: flex;
@@ -114,10 +113,10 @@ i {
   position: absolute;
   left: -90px;
   font-size: 1rem;
-  color: var(--black);
-  background: var(--white);
+  color: var(--white);
+  background: var(--black);
   padding: 7px 10px;
-  filter: url("#text");
+  /* 	filter: url('#text'); */
   opacity: 0;
   border-radius: 5px;
 }
@@ -175,14 +174,15 @@ i {
 .profile_image {
   width: 200px;
   height: 200px;
-  box-shadow: 0 10px 20px #1d1d23;
+  box-shadow: 0 5px 10px #1d1d2380;
   background-position-x: 50%;
-  background-image: url(https://drive.google.com/uc?export=view&id=14F12aOe7wg0PQJmLSm2a3koW0m7RlDh6);
+  /* background-image: url(https://github.com/prathameshkoshti/resources/raw/master/Profile%20Pic.png); */
+  background-image: url("../assets/images/Profile\ Pic.png");
   background-size: cover;
   background-clip: padding-box;
   background-repeat: no-repeat;
   border-radius: 50%;
-  border: 5px solid var(--white);
+  border: 5px solid var(--black);
 }
 
 .logo {
@@ -258,7 +258,7 @@ h1 {
 }
 #cursor {
   width: 0;
-  border-left: 2px solid var(--white);
+  border-left: 2px solid var(--black);
   height: 55px;
   animation: cursor-blink 1s infinite;
 }

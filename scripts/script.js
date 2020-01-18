@@ -1,10 +1,6 @@
 const typedText = document.getElementById('text');
 const cursor = document.getElementById('cursor');
-const texts = [
-	"Hi, I'm Prathamesh.",
-	"I'm a web dev.",
-	"I'm a ui/ux designer.",
-];
+texts = ["Hi, I'm Prathamesh.", "I'm a Web Dev.", "I'm a UI/UX enthusiast."];
 
 const typingTime = 200;
 const deletingTime = 50;
